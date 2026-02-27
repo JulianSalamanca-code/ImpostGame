@@ -1,8 +1,8 @@
-package game.impostgame.Controller;
+package game.impostgame.controller;
 
-import game.impostgame.Domain.*;
-import game.impostgame.Service.*;
-import game.impostgame.DTO.*;
+import game.impostgame.domain.*;
+import game.impostgame.service.*;
+import game.impostgame.dto.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -53,6 +53,8 @@ public class RoomController {
                 "playerId", player.getId(),
                 "nickname", player.getNickname()
         ));
+
+
     }
 
     @GetMapping("/{code}")

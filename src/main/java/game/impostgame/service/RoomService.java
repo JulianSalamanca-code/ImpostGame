@@ -1,15 +1,15 @@
-package game.impostgame.Service;
+package game.impostgame.service;
 
-import game.impostgame.Domain.Player;
-import game.impostgame.Domain.Room;
-import game.impostgame.Domain.RoomStatus;
-import game.impostgame.Repository.RoomRepository;
+import game.impostgame.domain.Player;
+import game.impostgame.domain.Room;
+import game.impostgame.domain.RoomStatus;
+import game.impostgame.repository.RoomRepository;
 import org.springframework.stereotype.Service;
-import game.impostgame.Repository.RoomRepository;
-import game.impostgame.Exception.BusinessException;
+import game.impostgame.exception.BusinessException;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Service;
+import game.impostgame.util.CodeGenerator;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 @Service
@@ -23,12 +23,12 @@ public class RoomService {
 
     public Room createRoom(String hostNickname, String category, int impostorCount) {
 
-        if (hostNickname == null || hostNickname.isBlank())
-            throw new BusinessException("Nickname inválido", HttpStatus.BAD_REQUEST);
+        if (category == null || category.isBlank())
+            throw new BusinessException("Categoría inválida", HttpStatus.BAD_REQUEST);
 
         Room room = new Room();
         room.setId(UUID.randomUUID());
-        room.setCode(UUID.randomUUID().toString().substring(0,6).toUpperCase());
+        room.setCode(CodeGenerator.generateCode());
         room.setStatus(RoomStatus.Lobby);
         room.setCategory(category);
         room.setImpostorCount(impostorCount);
@@ -49,6 +49,9 @@ public class RoomService {
 
     public Player joinRoom(String code, String nickname) {
 
+        System.out.println("Code recibido: " + code);
+        System.out.println("Nickname recibido: " + nickname);
+
         Room room = getRoom(code);
 
         if (room.getStatus() != RoomStatus.Lobby)
@@ -60,6 +63,8 @@ public class RoomService {
         player.setNickname(nickname);
 
         room.getPlayers().add(player);
+
+        roomRepository.save(room);
 
         return player;
     }

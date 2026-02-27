@@ -1,7 +1,7 @@
-package game.impostgame.Service;
+package game.impostgame.service;
 
-import game.impostgame.Domain.Assignment;
-import game.impostgame.Repository.AssignmentRepository;
+import game.impostgame.domain.Assignment;
+import game.impostgame.repository.AssignmentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

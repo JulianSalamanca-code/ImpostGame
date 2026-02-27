@@ -1,4 +1,4 @@
-package game.impostgame.Exception;
+package game.impostgame.exception;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

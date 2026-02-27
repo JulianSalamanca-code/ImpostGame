@@ -1,8 +1,8 @@
-package game.impostgame.Service;
+package game.impostgame.service;
 
-import game.impostgame.Domain.*;
-import game.impostgame.Repository.*;
-import game.impostgame.Exception.BusinessException;
+import game.impostgame.domain.*;
+import game.impostgame.repository.*;
+import game.impostgame.exception.BusinessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 

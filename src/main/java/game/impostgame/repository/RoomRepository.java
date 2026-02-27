@@ -1,6 +1,6 @@
-package game.impostgame.Repository;
+package game.impostgame.repository;
 
-import game.impostgame.Domain.Room;
+import game.impostgame.domain.Room;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package game.impostgame.Util;
+package game.impostgame.util;
 
 import org.springframework.stereotype.Component;
 

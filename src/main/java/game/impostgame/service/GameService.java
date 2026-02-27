@@ -1,8 +1,8 @@
-package game.impostgame.Service;
+package game.impostgame.service;
 
-import game.impostgame.Domain.*;
-import game.impostgame.Repository.*;
-import game.impostgame.Util.WordBank;
+import game.impostgame.domain.*;
+import game.impostgame.repository.*;
+import game.impostgame.util.WordBank;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

@@ -1,6 +1,6 @@
-package game.impostgame.Repository;
+package game.impostgame.repository;
 
-import game.impostgame.Domain.Assignment;
+import game.impostgame.domain.Assignment;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

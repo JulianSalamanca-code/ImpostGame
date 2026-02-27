@@ -1,6 +1,6 @@
-package game.impostgame.Repository;
+package game.impostgame.repository;
 
-import game.impostgame.Domain.Vote;
+import game.impostgame.domain.Vote;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;

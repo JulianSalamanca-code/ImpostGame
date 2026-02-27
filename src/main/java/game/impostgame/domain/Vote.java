@@ -1,4 +1,4 @@
-package game.impostgame.Domain;
+package game.impostgame.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

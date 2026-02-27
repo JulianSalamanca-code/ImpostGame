@@ -1,4 +1,4 @@
-package game.impostgame.DTO;
+package game.impostgame.dto;
 
 import lombok.Data;
 
